@@ -1,6 +1,16 @@
-# Transliteration of languages that use modified Latin script
+---
+title: The Language Transliteration Project
+emoji: 🐠
+colorFrom: indigo
+colorTo: gray
+sdk: streamlit
+sdk_version: 1.25.0
+app_file: app.py
+pinned: false
+license: cc
+---
 
-This space is aimed at helping people with getting familiarized with Polish orthography and pronunciation. Polish language uses a lot of character combinations which is unfamiliar to non-Poles, thus
+This space is aimed at helping people with getting familiarized with Polish. Polish language uses a lot of character combinations which is unfamiliar to non-Poles, thus
 making it harder to read, even though it employs a modified Latin script for writing. 
 
 For example, the Polish word Jarosław, an English speaker who isn't familiar with Polish orthography will pronounce it as Jaroslav, while its actual Polish pronunciation 
