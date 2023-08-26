@@ -1,3 +1,5 @@
+from nltk.tokenize import word_tokenize
+
 special_combs = {
     "Dzs" : "Ј", "dzs" : "ј",
     "Dz" : "Ъ", "dz" : "ъ", #Actually the sound of ds in kids

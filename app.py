@@ -33,8 +33,12 @@
 import streamlit as st
 from polish import polish_sentence_to_latin
 from hungarian import hungarian_sentence_to_latin
+from turkish import turkish_sentence_to_latin
 
-tab1, tab2= st.tabs(["Polish", "Hungarian"])
+import re
+from nltk.tokenize import word_tokenize
+
+tab1, tab2, tab3= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe"])
 
 with tab1:
     st.header("Polish Transliteration")
@@ -70,4 +74,22 @@ with tab2:
         else:
             st.warning("Please enter a string.")
             
-                     
+with tab3:
+
+    st.header("Turkish Transliteration")
+    input_string_turkish = st.text_input("Enter a Turkish word/sentence to transliterate:")
+    turkish_examples = ["Müzik, ruhumuzu besler ve duygularımızı ifade etmemize yardımcı olur.", "İhtiyaçlarınıza uygun özel bir çözüm sunabiliriz",
+                          "Türkiye'nin güzel şehirlerinden biri olan İstanbul'u ziyaret etmek istiyorum."]
+    selected_example_tu = st.selectbox('Choose an example as demo', ['None'] + turkish_examples)
+
+    if selected_example_tu != 'None':
+        input_string_turkish = selected_example_tu
+
+    if st.button("Transliterate Turkish"):
+        if input_string_turkish:
+            output_string = turkish_sentence_to_latin(input_string_turkish)
+            st.subheader("Transliterated Output:")
+            st.write(output_string)
+        else:
+            st.warning("Please enter a string.")
+    
