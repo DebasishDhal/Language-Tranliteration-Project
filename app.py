@@ -69,8 +69,8 @@ with tab1:
             st.subheader("Transliterated Output:")
             if selected_example_po == "Generate a random sentence" :
                 # st.write("Polish:"+input_string_polish+'Output:'+output_string)
-                st.write("Polish:"+input_string_polish)
-                st.write('Output:'+output_string)
+                st.write(input_string_polish)
+                st.write(output_string)
             else:
                 st.write(output_string)
         else:
@@ -93,8 +93,8 @@ with tab2:
             output_string = hungarian_sentence_to_latin(input_string_hungarian)
             st.subheader("Transliterated Output:")
             if selected_example_hu == "Generate a random sentence" :
-                st.write("Hungarian:"+input_string_hungarian)
-                st.write("Output:"+output_string)
+                st.write(input_string_hungarian)
+                st.write(output_string)
             else:
                 st.write(output_string)
         else:
@@ -119,8 +119,8 @@ with tab3:
             output_string = turkish_sentence_to_latin(input_string_turkish)
             st.subheader("Transliterated Output:")
             if selected_example_tu == "Generate a random sentence" :
-                st.write("Turkish:"+input_string_turkish)
-                st.write('Output:'+output_string)
+                st.write(input_string_turkish)
+                st.write(output_string)
             else:
                 st.write(output_string)
         else:
