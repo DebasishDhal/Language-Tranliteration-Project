@@ -1,4 +1,4 @@
-# from nltk.tokenize import word_tokenize
+from nltk.tokenize import word_tokenize
 
 special_combs = {
     "Dzs" : "Ј", "dzs" : "ј",

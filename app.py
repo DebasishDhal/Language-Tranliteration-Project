@@ -35,8 +35,19 @@ from polish import polish_sentence_to_latin
 from hungarian import hungarian_sentence_to_latin
 from turkish import turkish_sentence_to_latin
 
+from essential_generators import DocumentGenerator
+from googletrans import Translator
+
 import re
 from nltk.tokenize import word_tokenize
+
+
+def random_sentence(lang):
+    gen = DocumentGenerator()
+    translator = Translator()
+    sentence=gen.sentence() #Generates a random but coherent sentence in English
+    return str(translator.translate(sentence,dest=lang).text) #Translates the sentence to target language
+
 
 tab1, tab2, tab3= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe"])
 
@@ -44,16 +55,24 @@ with tab1:
     st.header("Polish Transliteration")
     input_string_polish = st.text_input("Enter a Polish word/sentence to transliterate:")
     polish_examples = ['Dziękuję bardzo!', 'Wszystkiego najlepszego!', 'Jarosław, Przemyśl']
-    selected_example_po = st.selectbox('Choose an example as demo', ['None'] + polish_examples)
+    selected_example_po = st.selectbox('Choose an example as demo', ['None', "Generate a random sentence"] + polish_examples)
 
     if selected_example_po != 'None':
         input_string_polish = selected_example_po
+
+    if selected_example_po == "Generate a random sentence" :
+        input_string_polish = random_sentence('pl')
 
     if st.button("Transliterate Polish"):
         if input_string_polish:
             output_string = polish_sentence_to_latin(input_string_polish)
             st.subheader("Transliterated Output:")
-            st.write(output_string)
+            if selected_example_po == "Generate a random sentence" :
+                # st.write("Polish:"+input_string_polish+'Output:'+output_string)
+                st.write("Polish:"+input_string_polish)
+                st.write('Output:'+output_string)
+            else:
+                st.write(output_string)
         else:
             st.warning("Please enter a string.")
 
@@ -61,16 +80,23 @@ with tab2:
     st.header("Hungarian Transliteration")
     input_string_hungarian = st.text_input("Enter a Hungarian word/sentence to transliterate:")
     hungarian_examples = ['Köszönöm szépen!', 'Nagyon szépen köszönjük','Budapest, Magyarország']
-    selected_example_hu = st.selectbox('Choose an example as demo', ['None'] + hungarian_examples)
+    selected_example_hu = st.selectbox('Choose an example as demo', ['None', "Generate a random sentence"] + hungarian_examples)
 
     if selected_example_hu != 'None':
         input_string_hungarian = selected_example_hu
+
+    if selected_example_hu == "Generate a random sentence" :
+        input_string_hungarian = random_sentence('hu')
 
     if st.button("Transliterate Hungarian"):
         if input_string_hungarian:
             output_string = hungarian_sentence_to_latin(input_string_hungarian)
             st.subheader("Transliterated Output:")
-            st.write(output_string)
+            if selected_example_hu == "Generate a random sentence" :
+                st.write("Hungarian:"+input_string_hungarian)
+                st.write("Output:"+output_string)
+            else:
+                st.write(output_string)
         else:
             st.warning("Please enter a string.")
             
@@ -80,16 +106,22 @@ with tab3:
     input_string_turkish = st.text_input("Enter a Turkish word/sentence to transliterate:")
     turkish_examples = ["Müzik, ruhumuzu besler ve duygularımızı ifade etmemize yardımcı olur.", "İhtiyaçlarınıza uygun özel bir çözüm sunabiliriz",
                           "Türkiye'nin güzel şehirlerinden biri olan İstanbul'u ziyaret etmek istiyorum."]
-    selected_example_tu = st.selectbox('Choose an example as demo', ['None'] + turkish_examples)
+    selected_example_tu = st.selectbox('Choose an example as demo', ['None', "Generate a random sentence"] + turkish_examples)
 
     if selected_example_tu != 'None':
         input_string_turkish = selected_example_tu
 
+    if selected_example_tu == "Generate a random sentence" :
+        input_string_turkish = random_sentence('tr')
+        
     if st.button("Transliterate Turkish"):
         if input_string_turkish:
             output_string = turkish_sentence_to_latin(input_string_turkish)
             st.subheader("Transliterated Output:")
-            st.write(output_string)
+            if selected_example_tu == "Generate a random sentence" :
+                st.write("Turkish:"+input_string_turkish)
+                st.write('Output:'+output_string)
+            else:
+                st.write(output_string)
         else:
             st.warning("Please enter a string.")
-    
