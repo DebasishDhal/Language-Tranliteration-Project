@@ -40,8 +40,8 @@ from serbo_croatian import serbian_sentence_to_latin
 from essential_generators import DocumentGenerator
 from googletrans import Translator
 
-import re
-from nltk.tokenize import word_tokenize
+# import re
+# from nltk.tokenize import word_tokenize
 
 
 def random_sentence(lang):
@@ -52,10 +52,11 @@ def random_sentence(lang):
 
 
 tab1, tab2, tab3, tab4= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe", "Serbo-Croatian-Bosniak"])
+# tab1, tab2, tab3 = st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe"])
 
 with tab1:
     st.header("Polish Transliteration")
-    input_string_polish = st.text_input("Enter a Polish word/sentence to transliterate:")
+    input_string_polish = st.text_area("Enter a Polish word/sentence to transliterate:")
     polish_examples = ['Dziękuję bardzo!', 'Wszystkiego najlepszego!', 'Jarosław, Przemyśl']
     selected_example_po = st.selectbox('Choose an example as demo', ['None', "Generate a random sentence"] + polish_examples)
 
@@ -80,7 +81,7 @@ with tab1:
 
 with tab2:
     st.header("Hungarian Transliteration")
-    input_string_hungarian = st.text_input("Enter a Hungarian word/sentence to transliterate:")
+    input_string_hungarian = st.text_area("Enter a Hungarian word/sentence to transliterate:")
     hungarian_examples = ['Köszönöm szépen!', 'Nagyon szépen köszönjük','Budapest, Magyarország']
     selected_example_hu = st.selectbox('Choose an example as demo', ['None', "Generate a random sentence"] + hungarian_examples)
 
@@ -105,7 +106,7 @@ with tab2:
 with tab3:
 
     st.header("Turkish Transliteration")
-    input_string_turkish = st.text_input("Enter a Turkish word/sentence to transliterate:")
+    input_string_turkish = st.text_area("Enter a Turkish word/sentence to transliterate:")
     turkish_examples = ["Müzik, ruhumuzu besler ve duygularımızı ifade etmemize yardımcı olur.", "İhtiyaçlarınıza uygun özel bir çözüm sunabiliriz",
                           "Türkiye'nin güzel şehirlerinden biri olan İstanbul'u ziyaret etmek istiyorum."]
     selected_example_tu = st.selectbox('Choose an example as demo', ['None', "Generate a random sentence"] + turkish_examples)
@@ -129,14 +130,17 @@ with tab3:
             st.warning("Please enter a string.")
 
 with tab4:
-    st.header("Serbo-Coratian-Bosniak Transliteration")
-    input_string_serbian = st.text_input("Enter a Serbian/Croatian/Bosniak word/sentence in Latin or Cyrillic to transliterate")
+    
+    st.header("Serbo-Croatian-Bosnian Transliteration")
+    input_string_serbian = st.text_area("Enter a Serbian/Croatian/Bosniak word/sentence in Latin or Cyrillic to transliterate:")
     serbian_examples = ["Српски језик је богат ћириличким алфабетом са словима као ш, ж, њ, ч, and ћ.",
                        "Čini se da hrvatski jezik ima mnogo složenih znakova",
                        "Bosna je najbolja zemlja na svijetu"]
-    selected_example_sr = st.selectbox('Choose an example',[None]+serbian_examples)
 
-    if selected_example_sr != ' None':
+    
+    selected_example_sr = st.selectbox('Choose an example as demo', ['None']+serbian_examples)
+
+    if selected_example_sr != 'None':
         input_string_serbian = selected_example_sr
         
     if st.button("Transliterate Serbo-Croatian-Bosniak"):
@@ -144,7 +148,7 @@ with tab4:
             output_string = serbian_sentence_to_latin(input_string_serbian)
             st.subheader("Transliterated Output")
             st.write(output_string)
-
+            
         else:
             st.warning("Please enter a string")
             
