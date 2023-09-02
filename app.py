@@ -34,6 +34,8 @@ import streamlit as st
 from polish import polish_sentence_to_latin
 from hungarian import hungarian_sentence_to_latin
 from turkish import turkish_sentence_to_latin
+from serbo_croatian import serbian_sentence_to_latin
+
 
 from essential_generators import DocumentGenerator
 from googletrans import Translator
@@ -49,7 +51,7 @@ def random_sentence(lang):
     return str(translator.translate(sentence,dest=lang).text) #Translates the sentence to target language
 
 
-tab1, tab2, tab3= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe"])
+tab1, tab2, tab3, tab4= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe", "Serbo-Croatian-Bosniak"])
 
 with tab1:
     st.header("Polish Transliteration")
@@ -125,3 +127,24 @@ with tab3:
                 st.write(output_string)
         else:
             st.warning("Please enter a string.")
+
+with tab4:
+    st.header("Serbo-Coratian-Bosniak Transliteration")
+    input_string_serbian = st.text_input("Enter a Serbian/Croatian/Bosniak word/sentence in Latin or Cyrillic to transliterate")
+    serbian_examples = ["Српски језик је богат ћириличким алфабетом са словима као ш, ж, њ, ч, and ћ.",
+                       "Čini se da hrvatski jezik ima mnogo složenih znakova",
+                       "Bosna je najbolja zemlja na svijetu"]
+    selected_example_sr = st.selectbox('Choose an example',[None]+serbian_examples)
+
+    if selected_example_sr != ' None':
+        input_string_serbian = selected_example_sr
+        
+    if st.button("Transliterate Serbo-Croatian-Bosniak"):
+        if input_string_serbian:
+            output_string = serbian_sentence_to_latin(input_string_serbian)
+            st.subheader("Transliterated Output")
+            st.write(output_string)
+
+        else:
+            st.warning("Please enter a string")
+            
