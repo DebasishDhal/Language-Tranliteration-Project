@@ -22,7 +22,7 @@ The approach for transliterating Polish language taken in this space is converti
 simplifying our task greately.
 
 Features added as of now:- 
--    Polish, Turkish, Hungarian, Serbo-Croatian-Bosniak language added.
+-    Polish, Turkish, Hungarian, Serbo-Croatian-Bosnian language added.
 -    Option for the user to choose any of the 3-4 examples available and pass it as input to the model.
 -    Option for the user to generate a random but coherent sentence and pass it as input to the model. Acts as a nice playground for the user.
 
