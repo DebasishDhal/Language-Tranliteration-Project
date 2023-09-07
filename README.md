@@ -13,7 +13,7 @@ Use this on HuggingFace🤗 :- https://huggingface.co/spaces/DebasishDhal99/The-
 
 This space is aimed at helping people with getting familiarized with Polish, Turkish, Hungarian, Serbian (both Latin and Cyrillic based), Croatian and Bosniak spelling system. 
 These languages use a modified Latin script with a lot of diacritic marks and digraphs, thus making them difficult for non-native speakers to pronounce or read the words 
-properly. This space offers simplified spelling of words/sentence in the said languages.
+properly. This space offers simplified spelling of words/sentence in the said languages. More languages are on the pipeline.
 
 For example, the Polish word Jarosław, an English speaker who isn't familiar with Polish orthography will pronounce it as Jaroslav, while its actual Polish pronunciation 
 is Yaroswav. Similary, the city of Przemyśl should be pronounced as Pzhemyshl, even though its not evident to an English speaker.
