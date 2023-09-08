@@ -39,6 +39,7 @@ from serbo_croatian import serbian_sentence_to_latin
 
 from essential_generators import DocumentGenerator
 from googletrans import Translator
+import string
 
 # import re
 # from nltk.tokenize import word_tokenize
@@ -51,7 +52,7 @@ def random_sentence(lang):
     return str(translator.translate(sentence,dest=lang).text) #Translates the sentence to target language
 
 
-tab1, tab2, tab3, tab4= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe", "Serbo-Croatian-Bosniak"])
+tab1, tab2, tab3, tab4= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe", "Serbo-Croatian-Bosnian"])
 # tab1, tab2, tab3 = st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe"])
 
 with tab1:
@@ -132,7 +133,7 @@ with tab3:
 with tab4:
     
     st.header("Serbo-Croatian-Bosnian Transliteration")
-    input_string_serbian = st.text_area("Enter a Serbian/Croatian/Bosniak word/sentence in Latin or Cyrillic to transliterate:")
+    input_string_serbian = st.text_area("Enter a Serbian/Croatian/Bosnian word/sentence in Latin or Cyrillic to transliterate:")
     serbian_examples = ["Српски језик је богат ћириличким алфабетом са словима као ш, ж, њ, ч, and ћ.",
                        "Čini se da hrvatski jezik ima mnogo složenih znakova",
                        "Bosna je najbolja zemlja na svijetu"]
@@ -143,7 +144,7 @@ with tab4:
     if selected_example_sr != 'None':
         input_string_serbian = selected_example_sr
         
-    if st.button("Transliterate Serbo-Croatian-Bosniak"):
+    if st.button("Transliterate Serbo-Croatian-Bosnian"):
         if input_string_serbian:
             output_string = serbian_sentence_to_latin(input_string_serbian)
             st.subheader("Transliterated Output")
