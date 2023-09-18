@@ -6,7 +6,10 @@ special_combs = {
     "Cs" : "Ч", "cs" : "ч",
     "Zs" : "Ж", "zs" : "ж",
     "Sz" : "С", "sz" : "с",
-    "Ly" : "y", "ly" : "y"
+    "Ly" : "y", "ly" : "y",
+    "C"  : "Ц", "c"  : "ц",
+    "Gy" : "Д", "gy" : "д",
+    "A" : "А",   "a" : "а" #For the aw sound of Hungarian a sound. The value is the cyrillic а.
 }
 
 hungarian_dict = {
@@ -30,7 +33,10 @@ cyrillic_equiv_dict = {
     "ш" : "sh", "Ш" : "Sh",
     "ј" : "j" , "Ј" : "J",
     "ю" : "yu", "Ю" : "Yu",
-    "с" : "s" , "С" : "S"
+    "с" : "s" , "С" : "S",
+    "ц" : "ts", "Ц" : "Ts",
+    "д" : "d" , "Д" : "D",
+    "а" : "aw", "А" : "Aw"
 }
 
 def check_special_comb(word):

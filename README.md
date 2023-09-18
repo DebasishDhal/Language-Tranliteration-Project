@@ -9,7 +9,9 @@ app_file: app.py
 pinned: false
 license: cc
 ---
-Use this on HuggingFace🤗 :- https://huggingface.co/spaces/DebasishDhal99/The-Language-Transliteration-Project
+Use this application on HuggingFace🤗 :- https://huggingface.co/spaces/DebasishDhal99/The-Language-Transliteration-Project
+
+Blog discussing the results :- https://medium.com/@debasishdhaldd99/simplifying-language-through-python-aae6ee7113d9
 
 This space is aimed at helping people with getting familiarized with Polish, Turkish, Hungarian, Serbian (both Latin and Cyrillic based), Croatian and Bosniak spelling system. 
 These languages use a modified Latin script with a lot of diacritic marks and digraphs, thus making them difficult for non-native speakers to pronounce or read the words 
