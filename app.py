@@ -1,45 +1,14 @@
-# import streamlit as st
-# from polish import polish_sentence_to_latin
-
-# st.title("Language Transliteration Interface")
-
-# input_string = st.text_input("Enter a Polish word/sentence to transliterate :")
-
-# example1 = "Dziękuję bardzo!"  # Example 1
-# example2 = "Wszystkiego najlepszego!"  # Example 2
-# example3 = "Jarosław, Przemyśl"
-
-# selected_example = st.selectbox('Choose an example as demo',
-#     ('None','Dziękuję bardzo!', 'Wszystkiego najlepszego!', 'Jarosław, Przemyśl'))
-
-# if selected_example == 'Dziękuję bardzo!':
-#     input_string = 'Dziękuję bardzo!'
-# elif selected_example == 'Wszystkiego najlepszego!':
-#     input_string = 'Wszystkiego najlepszego!'
-# elif selected_example == 'Jarosław, Przemyśl':
-#     input_string = 'Jarosław, Przemyśl'
-# else:
-#     input_string = input_string
-
-    
-# if st.button("Transliterate"):
-#     if input_string:
-#         output_string = polish_sentence_to_latin(input_string)
-#         st.subheader("Transliterated Output:")
-#         st.write(output_string)
-#     else:
-#         st.warning("Please enter a string.")
-
 import streamlit as st
 from polish import polish_sentence_to_latin
 from hungarian import hungarian_sentence_to_latin
 from turkish import turkish_sentence_to_latin
 from serbo_croatian import serbian_sentence_to_latin
-
+from romanian import romanian_sentence_to_latin
 
 from essential_generators import DocumentGenerator
 from googletrans import Translator
 import string
+import re
 
 # import re
 # from nltk.tokenize import word_tokenize
@@ -52,7 +21,8 @@ def random_sentence(lang):
     return str(translator.translate(sentence,dest=lang).text) #Translates the sentence to target language
 
 
-tab1, tab2, tab3, tab4= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe", "Serbo-Croatian-Bosnian"])
+tab1, tab2, tab3, tab4, tab5= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe", "Serbo-Croatian-Bosnian", "Romanian"])
+# tab1, tab3, tab4= st.tabs(["Polish/Polski", "Turkish/Türkçe", "Serbo-Croatian-Bosnian"])
 # tab1, tab2, tab3 = st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe"])
 
 with tab1:
@@ -152,4 +122,25 @@ with tab4:
             
         else:
             st.warning("Please enter a string")
+
+
+with tab5:
+    st.header("Romanian Tranlisteration")
+    input_string_romanian = st.text_area("Enter a Romanian word/sentence for transliteration into simple Latin")
+    romanian_examples = ["România este situată lângă Marea Neagră", "Moldova a folosit grafia chirilică pentru a scrie limba moldovenească", 
+                        "Va multumim pentru vizita"]
+
+    selected_example_ro = st.selectbox("Choose and example as demo", ['None']+romanian_examples)
+
+    if selected_example_ro != 'None':
+        input_string_romanian = selected_example_ro
+        
+    if st.button("Transliterate Romanian"):
+        if input_string_romanian:
+            output_string = romanian_sentence_to_latin(input_string_romanian)
+            st.subheader("Transliterated Output")
+            st.write(output_string)
             
+        else:
+            st.warning("Please enter a string")
+
