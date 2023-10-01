@@ -13,7 +13,7 @@ Use this application on HuggingFace🤗 :- https://huggingface.co/spaces/Debasis
 
 Blog discussing the results :- https://medium.com/@debasishdhaldd99/simplifying-language-through-python-aae6ee7113d9
 
-This space is aimed at helping people with getting familiarized with Polish, Turkish, Hungarian, Serbian (both Latin and Cyrillic based), Croatian and Bosniak spelling system. 
+This space is aimed at helping people with getting familiarized with Polish, Turkish, Hungarian, Serbo-Croatian-Bosniak (both Latin and Cyrillic based) and Romanian spelling system. 
 These languages use a modified Latin script with a lot of diacritic marks and digraphs, thus making them difficult for non-native speakers to pronounce or read the words 
 properly. This space offers simplified spelling of words/sentence in the said languages. More languages are on the pipeline.
 
@@ -24,7 +24,7 @@ The approach for transliterating Polish language taken in this space is converti
 simplifying our task greately.
 
 Features added as of now:- 
--    Polish, Turkish, Hungarian, Serbo-Croatian-Bosnian language added.
+-    Polish, Turkish, Hungarian, Serbo-Croatian-Bosnian, Romanian language added.
 -    Option for the user to choose any of the 3-4 examples available and pass it as input to the model.
 -    Option for the user to generate a random but coherent sentence and pass it as input to the model. Acts as a nice playground for the user.
 
