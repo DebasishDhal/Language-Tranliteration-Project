@@ -10,10 +10,6 @@ from googletrans import Translator
 import string
 import re
 
-# import re
-# from nltk.tokenize import word_tokenize
-
-
 def random_sentence(lang):
     gen = DocumentGenerator()
     translator = Translator()
@@ -109,19 +105,25 @@ with tab4:
                        "Bosna je najbolja zemlja na svijetu"]
 
     
-    selected_example_sr = st.selectbox('Choose an example as demo', ['None']+serbian_examples)
+    selected_example_sr = st.selectbox('Choose an example as demo', ['None',"Generate a random sentence"]+serbian_examples)
 
     if selected_example_sr != 'None':
         input_string_serbian = selected_example_sr
-        
+
+    if selected_example_sr == "Generate a random sentence":
+        input_string_serbian = random_sentence("sr")
+    
     if st.button("Transliterate Serbo-Croatian-Bosnian"):
         if input_string_serbian:
             output_string = serbian_sentence_to_latin(input_string_serbian)
-            st.subheader("Transliterated Output")
-            st.write(output_string)
-            
+            st.subheader("Transliterated Output:")
+            if selected_example_sr == "Generate a random sentence" :
+                st.write(input_string_serbian)
+                st.write(output_string)
+            else:
+                st.write(output_string)
         else:
-            st.warning("Please enter a string")
+            st.warning("Please enter a string.")
 
 
 with tab5:
@@ -130,17 +132,22 @@ with tab5:
     romanian_examples = ["România este situată lângă Marea Neagră", "Moldova a folosit grafia chirilică pentru a scrie limba moldovenească", 
                         "Va multumim pentru vizita"]
 
-    selected_example_ro = st.selectbox("Choose and example as demo", ['None']+romanian_examples)
+    selected_example_ro = st.selectbox("Choose an example as demo", ['None', "Generate a random sentence"]+romanian_examples)
 
     if selected_example_ro != 'None':
         input_string_romanian = selected_example_ro
         
+    if selected_example_ro == "Generate a random sentence" :
+        input_string_romanian = random_sentence('ro')
+        
     if st.button("Transliterate Romanian"):
         if input_string_romanian:
             output_string = romanian_sentence_to_latin(input_string_romanian)
-            st.subheader("Transliterated Output")
-            st.write(output_string)
-            
+            st.subheader("Transliterated Output:")
+            if selected_example_ro == "Generate a random sentence" :
+                st.write(input_string_romanian)
+                st.write(output_string)
+            else:
+                st.write(output_string)
         else:
-            st.warning("Please enter a string")
-
+            st.warning("Please enter a string.")
