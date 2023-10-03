@@ -56,7 +56,7 @@ Turkish spelling => Simplified form
 - Azerbaycan => Azerbayjan
 - Türkiye => Tyurkiye
 - Recep Tayyip Erdoğan => Rejep Tayyip Erdo’an (Turkish president)
-- Barış Alper Yılmaz => Barış Alper Yelmaz (Turkish footballer)
+- Barış Alper Yılmaz => Baresh Alper Yelmaz (Turkish footballer)
 
 ## Serbo-Croatian-Bosnian
 Serbo-Croatian-Bosnian spelling => Simplified form
