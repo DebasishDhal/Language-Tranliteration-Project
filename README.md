@@ -14,7 +14,10 @@ Use this application on HuggingFace🤗 :- https://huggingface.co/spaces/Debasis
 Blog discussing the results :- https://medium.com/@debasishdhaldd99/simplifying-language-through-python-aae6ee7113d9
 
 This space is aimed at helping people with getting familiarized with Polish, Turkish, Hungarian, Serbo-Croatian-Bosniak (both Latin and Cyrillic based) and Romanian spelling system. 
-These languages use a modified Latin script with a lot of diacritic marks and digraphs, thus often making them difficult for non-native speakers to pronounce or read the words 
+
+**Why?**
+
+The languages mentioned above, use a modified Latin script with a lot of diacritic marks and digraphs, thus often making them difficult for non-native speakers to pronounce or read the words 
 properly. This space offers simplified spelling of words/sentence in the said languages. More languages are on the pipeline.
 
 For example, the Polish word Jarosław, an English speaker who isn't familiar with Polish orthography will pronounce it as Jaroslav, while its actual Polish pronunciation 
@@ -29,45 +32,47 @@ Features added as of now:-
 -    Option for the user to generate a random but coherent sentence and pass it as input to the model. Acts as a nice playground for the user.
 
 # Results in brief
+For each language, some names/placenames in that language were given to this web app as input, the simplified outputs are presented below. 
+
 ## Polish 
 Polish spelling => Simplified form
 
-- Wojciech Szczęsny => Voytsiekh Shensny
-- Grzegorz Krychowiak => Gzhegozh Krykhoviak (zh is pronounced like the "s" in measure/vision)
-- Łódź => Wuj
-- Szeleścić => Sheleshtsich
+- Wojciech Szczęsny => Voytsiekh Shensny (Polish footballer)
+- Grzegorz Krychowiak => Gzhegozh Krykhoviak (zh is pronounced like the "s" in measure/vision) (Polish footballer)
+- Łódź => Wuj (Major Polish city)
+- Rzeszow => Zheshov (Polish city near Ukraine)
 
 ## Hungarian
 Hungarian spelling => Simplified form
 
-- Dominik Szoboszlai => Dominik Soboslai
-- Budapest => Budapesht
-- Debrecen => Debretsen
-- Pozsony => Pozhony
+- Dominik Szoboszlai => Dominik Soboslai (Hungarian footballer)
+- Budapest => Budapesht (Hungarian capital)
+- Debrecen => Debretsen (Major Hungarian city)
+- Pozsony => Pozhony (Hungarian name for Bratislava)
 
 ## Turkish
 Turkish spelling => Simplified form
 
 - Azerbaycan => Azerbayjan
 - Türkiye => Tyurkiye
-- Recep Tayyip Erdoğan => Rejep Tayyip Erdo’an
-- Barış Alper Yılmaz => Barış Alper Yelmaz
+- Recep Tayyip Erdoğan => Rejep Tayyip Erdo’an (Turkish president)
+- Barış Alper Yılmaz => Barış Alper Yelmaz (Turkish footballer)
 
 ## Serbo-Croatian-Bosnian
 Serbo-Croatian-Bosnian spelling => Simplified form
 
-- Novak Đoković => Novak Jokovich
-- Karadžić => Karajich
-- Edin Džeko => Edin Jeko
-- Artiljerija => Artilyeriya
+- Novak Đoković => Novak Jokovich (No introduction needed)
+- Karadžić => Karajich (Serbain war criminal)
+- Edin Džeko => Edin Jeko (Bosnian Footballer)
+- Artiljerija => Artilyeriya (Artillery)
 
 ## Romanian
 Romanian spelling => Simplified form
 
-- Cluj-Napoca => Kluzh Napoka
+- Cluj-Napoca => Kluzh Napoka (A city in Romanian Translyvania)
 - București => Bukureshti (Bucharest)
-- Angela Gheorghiu => Anjela Georgiu 
-- Constantin Brâncuși => Konstantin Brunkushi
+- Angela Gheorghiu => Anjela Georgiu (Romanian singer)
+- Constantin Brâncuși => Konstantin Brunkushi (Romanian Sculptor)
 
 
 *************************************************************************************************
