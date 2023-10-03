@@ -1,16 +1,18 @@
 from nltk.tokenize import word_tokenize
 
 special_combs = {
+    "Csz" : "С", "csz" : "с",
     "Dzs" : "Ј", "dzs" : "ј",
     "Dz" : "Ъ", "dz" : "ъ", #Actually the sound of ds in kids
+    "Sz" : "С", "sz" : "с",
     "Cs" : "Ч", "cs" : "ч",
     "Zs" : "Ж", "zs" : "ж",
-    "Sz" : "С", "sz" : "с",
     "Ly" : "y", "ly" : "y",
     "C"  : "Ц", "c"  : "ц",
-    "Gy" : "Д", "gy" : "д",
-    "A" : "А",   "a" : "а" #For the aw sound of Hungarian a sound. The value is the cyrillic а.
+    # "Gy" : "Д", "gy" : "д",
+    # "A" : "А",   "a" : "а" #For the aw sound of Hungarian a sound. The value is the cyrillic а.
 }
+
 
 hungarian_dict = {
     "á" : "a", "Á" : "A",
@@ -35,8 +37,6 @@ cyrillic_equiv_dict = {
     "ю" : "yu", "Ю" : "Yu",
     "с" : "s" , "С" : "S",
     "ц" : "ts", "Ц" : "Ts",
-    "д" : "d" , "Д" : "D",
-    "а" : "aw", "А" : "Aw"
 }
 
 def check_special_comb(word):
