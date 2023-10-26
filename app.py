@@ -17,7 +17,7 @@ def random_sentence(lang):
     return str(translator.translate(sentence,dest=lang).text) #Translates the sentence to target language
 
 
-tab1, tab2, tab3, tab4, tab5= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe", "Serbo-Croatian-Bosnian", "Romanian"])
+tab1, tab2, tab3, tab4, tab5= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe", "Serbo-Croatian-Bosnian", "Romanian/Română"])
 # tab1, tab3, tab4= st.tabs(["Polish/Polski", "Turkish/Türkçe", "Serbo-Croatian-Bosnian"])
 # tab1, tab2, tab3 = st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe"])
 
