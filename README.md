@@ -48,13 +48,13 @@ Hungarian spelling => Simplified form
 - Dominik Szoboszlai => Dominik Soboslai (Hungarian footballer)
 - Budapest => Budapesht (Hungarian capital)
 - Debrecen => Debretsen (Major Hungarian city)
-- Pozsony => Pozhony (Hungarian name for Bratislava)
+- Pozsony => Pozhony (Hungarian name for Bratislava, capital of Slovakia)
 
 ## Turkish
 Turkish spelling => Simplified form
 
-- Azerbaycan => Azerbayjan
-- Türkiye => Tyurkiye
+- Azerbaycan => Azerbayjan 
+- Türkiye => Tyurkiye (Turkey)
 - Recep Tayyip Erdoğan => Rejep Tayyip Erdo’an (Turkish president)
 - Barış Alper Yılmaz => Baresh Alper Yelmaz (Turkish footballer)
 
