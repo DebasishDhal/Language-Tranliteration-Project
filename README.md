@@ -74,6 +74,6 @@ Romanian spelling => Simplified form
 - Angela Gheorghiu => Anjela Georgiu (Romanian singer)
 - Constantin Brâncuși => Konstantin Brunkushi (Romanian Sculptor)
 
-
+**Note** : -  At the end, it's just best to learn the script and its pronunciation rules, from a long-term POV. However, not everyone has the time to do that. I think this project of mine provides a solution in short-term.
 *************************************************************************************************
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
