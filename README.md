@@ -69,7 +69,7 @@ Serbo-Croatian-Bosnian spelling => Simplified form
 ## Romanian
 Romanian spelling => Simplified form
 
-- Cluj-Napoca => Kluzh Napoka (A city in Romanian Translyvania)
+- Cluj-Napoca => Kluzh Napoka (A city in Romanian Translyvania, also known as Klausenberg in German)
 - București => Bukureshti (Bucharest)
 - Angela Gheorghiu => Anjela Georgiu (Romanian singer)
 - Constantin Brâncuși => Konstantin Brunkushi (Romanian Sculptor)
