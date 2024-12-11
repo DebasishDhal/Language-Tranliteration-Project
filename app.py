@@ -6,18 +6,25 @@ from serbo_croatian import serbian_sentence_to_latin
 from romanian import romanian_sentence_to_latin
 
 from essential_generators import DocumentGenerator
-from googletrans import Translator
+# from googletrans import Translator
+# from googletrans_temp import Translator
 import string
 import re
+from deep_translator import GoogleTranslator
+
+# def random_sentence(lang):
+#     gen = DocumentGenerator()
+#     translator = Translator()
+#     sentence=gen.sentence() #Generates a random but coherent sentence in English
+#     return str(translator.translate(sentence,dest=lang).text) #Translates the sentence to target language
 
 def random_sentence(lang):
     gen = DocumentGenerator()
-    translator = Translator()
-    sentence=gen.sentence() #Generates a random but coherent sentence in English
-    return str(translator.translate(sentence,dest=lang).text) #Translates the sentence to target language
+    sentence = gen.sentence()  # Generates a random sentence in English
+    translated = GoogleTranslator(source='en', target=lang).translate(sentence)
+    return translated
 
-
-tab1, tab2, tab3, tab4, tab5= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe", "Serbo-Croatian-Bosnian", "Romanian/Română"])
+tab1, tab2, tab3, tab4, tab5= st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe", "Serbo-Croatian-Bosnian", "Romanian"])
 # tab1, tab3, tab4= st.tabs(["Polish/Polski", "Turkish/Türkçe", "Serbo-Croatian-Bosnian"])
 # tab1, tab2, tab3 = st.tabs(["Polish/Polski", "Hungarian/Magyar", "Turkish/Türkçe"])
 
