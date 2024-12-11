@@ -1,4 +1,4 @@
-streamlit
-nltk
-essential-generators
-googletrans==3.1.0a0
+streamlit==1.18.1      # Streamlit version in early 2023
+nltk==3.8.1            # NLTK version commonly used in 2023
+essential-generators==0.9.2  # Latest version around 2023
+deep_translator
